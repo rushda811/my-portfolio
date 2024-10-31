@@ -1,0 +1,290 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+body {
+    background-image: url("./bbgg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 2000px 2300px;
+   }
+
+.header{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#ww{
+    width: 60%;
+    position: absolute;
+    top:10px;
+    
+
+}
+.navlinks{
+    padding: 40px;
+
+}
+.navlinks>a{
+    margin-right: 40px;
+    font-size: 25px;
+    color:purple;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: font-size 1s;
+
+}
+
+
+.navlinks>a:hover{
+    font-size: 35px;
+    color:black;
+    padding: 40px;
+
+}
+.foot{
+    padding: 40px;
+    text-align: center;
+
+}
+.foot>a{
+    margin-right: 40px;
+    font-size: 25px;
+    color:purple;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: font-size 1s;
+    
+}
+
+.foot>a:hover{
+    font-size: 35px;
+    color:black;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 60%  50% ;
+}
+.desc{
+    padding: 50px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#women,#abtimg{
+    border-radius: 50%;
+    border-style: dotted;
+      
+}
+
+#username{
+    color:purple;
+    font-style: bolder;
+    font-size: 50px;
+}
+.desc>a{
+    background-color: black;
+    color: lavender;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+
+
+
+#about{
+    padding: 30px;
+    font-size: large;
+   
+    margin-right: 40px;
+    font-size: 25px;
+    color:purple;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+#about>h1{
+    margin-top: 30px;
+   text-align: center;
+    font-style: bolder;
+    font-size: 50px;
+    margin-right: 40px;
+    color:purple;
+    text-decoration: underline;
+    font-weight: bolder;
+
+    
+}
+
+#contact>h1{
+    margin-top: 30px;
+   text-align: center;
+    font-style: bolder;
+    font-size: 50px;
+    margin-right: 40px;
+    color:purple;
+    text-decoration: underline;
+    font-weight: bolder;
+
+    
+}
+#skills>h1{
+    margin-top: 30px;
+   text-align: center;
+    font-style: bolder;
+    font-size: 50px;
+    margin-right: 40px;
+    color:purple;
+    text-decoration: underline;
+    font-weight: bolder;
+
+    
+}
+
+
+
+.aboutcontainer{
+    padding: 10px;
+    display: grid;
+    grid-template-columns:  50% 50%;
+
+}
+
+
+#abtimg{
+
+    width: 60%;
+    top:10px;
+    left: 90px;
+}
+
+#contact{
+ 
+
+    text-align: center;
+     font-style: bolder;
+     font-size: 50px;
+     color:purple;
+     text-decoration: none;
+}
+     
+
+.contactinfo{
+
+    text-align: center;
+     font-style: bolder;
+     font-size: 20px;
+     color:purple;
+     text-decoration: none;
+     
+}
+
+
+
+
+
+
+.abtinfo{
+    padding-left: 30px;
+}
+
+.abtinfo>p{
+    text-align: justify;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+#footer{
+    text-align: center;
+    padding: 5px;
+    font-size: 35px;
+    background-color: violet;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.foot>a{
+    padding: 10px;
+    
+    font-size: 25px;
+    color:purple;
+    text-decoration: none;
+    font-size: large;
+    scroll-behavior: smooth;
+   
+    
+}
+
+    #skill{
+        background-color: purple;
+    }
+
+    #skills {
+        text-align: center;
+        padding: 30px;
+        font-size: 35px;
+        color: white;
+        font-weight: 500;
+        padding-bottom: 5px
+        
+    
+    
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    
+        padding: 10px;
+        gap: 60px;
+        padding-bottom: 40px;
+       
+      
+       
+    }
+    #head {
+        color: purple;
+        font-weight: 400;
+        text-decoration: underline;
+    
+    }
+    .grid-item {
+        background-color: violet;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        height: 300px;
+        justify-content: center;
+        align-content: space-between;
+        border-radius: 10%;
+    }
+    #listess{
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        color: white;
+    }
+#contact>h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
