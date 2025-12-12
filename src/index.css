@@ -1,13 +1,72 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.motion-div:hover {
+  box-shadow: 0 0 20px #a855f7, 0 0 40px #f472b6, 0 0 60px #60a5fa;
+}
+@keyframes scan {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 100%; }
+}
+.animate-scan {
+  animation: scan 5s linear infinite;
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #a855f7, 0 0 20px #ec4899, 0 0 30px #3b82f6;
+  }
+  50% {
+    text-shadow: 0 0 20px #a855f7, 0 0 30px #ec4899, 0 0 40px #3b82f6;
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Apply to the name */
+.name {
+  font-family: 'Bitcount Grid Double Ink', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 5rem; /* Adjust size as needed */
+  letter-spacing: 0.1em; /* Optional: Adjust spacing */
+  color: #000; /* Adjust color as needed */
+}
+
+/* Apply to the subtitle */
+.subtitle {
+  font-family: 'Bitcount Grid Double Ink', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 3rem; /* Adjust size as needed */
+  letter-spacing: 0.05em; /* Optional: Adjust spacing */
+  color: #555; /* Adjust color as needed */
+}
+
+.font-bitcount {
+  font-family: 'Bitcount Grid Double Ink', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
