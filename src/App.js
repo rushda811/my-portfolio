@@ -354,53 +354,67 @@ const App = () => {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 relative z-10">
     {[
-      {
-        title: "Trinity Consular Website :",
-        desc: "A fully functional consular services website built for Trinity Consular, providing document  certification, and attestation support. The site includes both static and dynamic pages, enquiry forms, email-based communication, and service workflows for document attestation and validation. It is publicly accessible on Google and actively used by customers.",
-      },
-      {
-        title: "Blockchain based counterfeit medicine authentication system :",
-        desc: "A proof-of-concept system to detect counterfeit medicines by combining package serialization (QR), a Flask backend for verification and analytics, and a Solidity smart contract on a Ganache testnet to create an immutable audit trail. Features include batch creation, QR generation, duplicate-scan detection, and an admin dashboard for recalls.",
-      },
-      {
-        title: "My portfolio :",
-        desc: "This portfolio is built with React.js and styled using Tailwind CSS along with custom animations. It includes smooth scrolling, neon hover effects, pulse and glow keyframes, and a unique Bitcount font for a modern visual style. The codebase is lightweight, modular, and optimised for fast, responsive performance.",
-      },
-    ].map((project, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: i * 0.15 }}
-        className="group relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md shadow-[0_0_25px_rgba(168,85,247,0.3)] hover:shadow-[0_0_50px_rgba(147,51,234,0.7)] transition-all duration-500"
+  {
+    title: "Trinity Consular Website :",
+    desc: "A fully functional consular services website built for Trinity Consular, providing document certification, and attestation support. The site includes both static and dynamic pages, enquiry forms, email-based communication, and service workflows for document attestation and validation. It is publicly accessible on Google and actively used by customers.",
+    link: "https://www.trinityconsular.com/"
+  },
+  {
+    title: "Blockchain based counterfeit medicine authentication system :",
+    desc: "A proof-of-concept system to detect counterfeit medicines by combining package serialization (QR), a Flask backend for verification and analytics, and a Solidity smart contract on a Ganache testnet to create an immutable audit trail. Features include batch creation, QR generation, duplicate-scan detection, and an admin dashboard for recalls.",
+    link: "https://github.com/rushda811/Medicine-"
+  },
+  {
+    title: "My portfolio :",
+    desc: "This portfolio is built with React.js and styled using Tailwind CSS along with custom animations. It includes smooth scrolling, neon hover effects, pulse and glow keyframes, and a unique Bitcount font for a modern visual style. The codebase is lightweight, modular, and optimised for fast, responsive performance.",
+    link: "https://github.com/rushda811/my-portfolio"
+  },
+].map((project, i) => (
+  <motion.div
+    key={i}
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: i * 0.15 }}
+    className="group relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md shadow-[0_0_25px_rgba(168,85,247,0.3)] hover:shadow-[0_0_50px_rgba(147,51,234,0.7)] transition-all duration-500"
+  >
+    {/* Animated background glow */}
+    <motion.div
+      className="absolute inset-0 opacity-30 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-400 blur-3xl"
+      animate={{ opacity: [0.25, 0.45, 0.25] }}
+      transition={{ repeat: Infinity, duration: 5 + i }}
+    />
+
+    {/* Content */}
+    <div className="relative p-8 z-10">
+      <h3
+        className="text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.6)]"
+        style={{ fontFamily: "'Bitcount Grid Double Ink', sans-serif" }}
       >
-        {/* Animated background glow */}
-        <motion.div
-          className="absolute inset-0 opacity-30 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-400 blur-3xl"
-          animate={{ opacity: [0.25, 0.45, 0.25] }}
-          transition={{ repeat: Infinity, duration: 5 + i }}
-        />
+        {project.title}
+      </h3>
+      <p className="text-gray-300 leading-relaxed text-base mb-4">{project.desc}</p>
 
-        {/* Content */}
-        <div className="relative p-8 z-10">
-          <h3
-            className="text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-[0_0_15px_rgba(147,51,234,0.6)]"
-            style={{ fontFamily: "'Bitcount Grid Double Ink', sans-serif" }}
-          >
-            {project.title}
-          </h3>
-          <p className="text-gray-300 leading-relaxed text-base">{project.desc}</p>
-        </div>
+      {/* Clickable link */}
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 font-semibold underline hover:text-purple-400 transition-colors"
+      >
+        View Project
+      </a>
+    </div>
 
-        {/* Animated underline visible on scroll */}
-        <motion.div
-          className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 w-0"
-          whileInView={{ width: "100%" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-        />
-      </motion.div>
-    ))}
+    {/* Animated underline visible on scroll */}
+    <motion.div
+      className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 w-0"
+      whileInView={{ width: "100%" }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+    />
+  </motion.div>
+))}
+
   </div>
 </section>
 
