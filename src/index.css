@@ -2,13 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070311;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#a855f7, #ec4899, #3b82f6);
+  border-radius: 10px;
+}
+/* Prevent horizontal scrolling */
 html, body, #root {
   height: 100%;
-  margin: 0;
+  width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 .animate-pulse {
   animation: pulse 2s infinite;
 }
@@ -45,7 +64,6 @@ html, body, #root {
 .name {
   font-family: 'Bitcount Grid Double Ink', sans-serif;
   font-weight: 700; /* Bold */
-  font-size: 5rem; /* Adjust size as needed */
   letter-spacing: 0.1em; /* Optional: Adjust spacing */
   color: #000; /* Adjust color as needed */
 }
@@ -54,19 +72,10 @@ html, body, #root {
 .subtitle {
   font-family: 'Bitcount Grid Double Ink', sans-serif;
   font-weight: 400; /* Regular */
-  font-size: 3rem; /* Adjust size as needed */
   letter-spacing: 0.05em; /* Optional: Adjust spacing */
   color: #555; /* Adjust color as needed */
 }
 
 .font-bitcount {
   font-family: 'Bitcount Grid Double Ink', sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
 }

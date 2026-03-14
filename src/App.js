@@ -176,8 +176,7 @@ const App = () => {
   return (
     <motion.div
       style={{ scale: bgScaleSpring }}
-      className="relative font-sans text-white cursor-none overflow-x-hidden bg-gradient-to-b from-[#0a0a10] to-[#1f0f3a] min-h-screen"
-    >
+      className="relative font-sans text-white cursor-none overflow-x-hidden w-full max-w-[100vw] bg-gradient-to-b from-[#0a0a10] to-[#1f0f3a] min-h-screen"    >
       <Cursor />
 
       {/* Star Background */}
@@ -256,13 +255,11 @@ const App = () => {
   </h2>
 
   {/* Zig-Zag Skill Orbs */}
-  <div className="relative w-full h-[40rem] flex flex-wrap justify-center items-center">
-    {[
+<div className="relative w-full h-[28rem] sm:h-[32rem] md:h-[40rem] flex flex-wrap justify-center items-center overflow-hidden">    {[
       "React", "Django", "Python", "JavaScript",
       "CSS", "HTML", "Tailwind", "Git", "SQL", "REST API"
     ].map((skill, i) => {
-      const size = 100 + Math.random() * 50;
-      const xPos = 10 + (i % 5) * 18 + Math.random() * 5; // divide width into 5 segments
+const size = window.innerWidth < 640 ? 70 : 100 + Math.random() * 50;     const xPos = 5 + (i % 5) * 18; // divide width into 5 segments
       const yPos = i % 2 === 0 ? 20 + Math.random() * 5 : 40 + Math.random() * 5; // zig-zag top positions
       const floatDuration = 6 + Math.random() * 4;
 
@@ -359,6 +356,11 @@ const App = () => {
     desc: "A fully functional consular services website built for Trinity Consular, providing document certification, and attestation support. The site includes both static and dynamic pages, enquiry forms, email-based communication, and service workflows for document attestation and validation. It is publicly accessible on Google and actively used by customers.",
     link: "https://www.trinityconsular.com/"
   },
+  {
+  title: "Fresh Juice Store :",
+  desc: "A modern juice store web application built using React and Tailwind CSS. The project features a responsive UI, product listings, cart functionality, and a smooth shopping experience. It is deployed live using Vercel and designed with modern gradients and animations.",
+  link: "https://freshjuice-ad.vercel.app"
+},
   {
     title: "Blockchain based counterfeit medicine authentication system :",
     desc: "A proof-of-concept system to detect counterfeit medicines by combining package serialization (QR), a Flask backend for verification and analytics, and a Solidity smart contract on a Ganache testnet to create an immutable audit trail. Features include batch creation, QR generation, duplicate-scan detection, and an admin dashboard for recalls.",
